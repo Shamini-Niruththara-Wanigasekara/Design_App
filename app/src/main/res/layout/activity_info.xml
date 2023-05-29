@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".InfoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:id="@+id/firstCardView"
+        android:layout_height="320dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageViewInfo"
+                android:src="@drawable/avail"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewInfo"
+                android:text="Cycle Name"
+                android:textColor="@color/org"
+                android:textSize="30sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:id="@+id/cycleNameinInfo"/>
+
+            <TextView
+                android:id="@+id/cyclePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewInfo"
+                android:layout_alignRight="@+id/cycleNameinInfo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:text="$250 per one Ride"
+                android:textColor="@color/org"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/secondCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/firstCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="130dp"
+                android:id="@+id/addquantity"
+                android:background="@drawable/plus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/quantity"
+                android:textSize="28sp"
+                android:layout_toRightOf="@+id/addquantity"/>
+
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/subquantity"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/quantity"
+                android:background="@drawable/minus"/>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/radioGroup"
+                android:layout_below="@id/subquantity">
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Used"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/usedradioButton"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Newed"
+                    android:id="@+id/newedRadioButton"/>
+
+            </RadioGroup>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup"
+                android:id="@+id/addHelmet"
+                android:text="Hetmet price $3"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addAccessory"
+                android:layout_below="@+id/addHelmet"
+                android:text="Add $2 for Accessory"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/Avail"
+                android:id="@+id/descriptioninfo"
+                android:textStyle="italic"
+                android:textSize="15sp"
+                android:layout_below="@+id/addAccessory"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/descriptioninfo"
+                android:background="#F44336"
+                android:textStyle="bold"
+                android:id="@+id/addtocart"
+                android:textColor="@android:color/white"
+                android:text="Add to cart"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DesignApp_Final"
+        tools:targetApi="31">
+        <activity
+            android:name=".TeamsConditionsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DashBoardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PlacesNavigation"
+            android:exported="true" />
+        <activity
+            android:name=".BookCycleVideo"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB12ekB7VNnhwzTMD2pg2vk4Gl3w_2Jxsc" />
+
+        <activity
+            android:name=".MapsActivitySearch"
+            android:exported="true"
+            android:label="@string/title_activity_maps_search" />
+        <activity
+            android:name=".SensorFingerPrint"
+            android:exported="true" />
+        <activity
+            android:name=".PaymentChoice"
+            android:exported="true" />
+        <activity
+            android:name=".ReviewBookView"
+            android:exported="true" />
+        <activity
+            android:name=".AddAccessoriesView"
+            android:exported="true" />
+        <activity
+            android:name=".SensorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".CyclelistView"
+            android:exported="true" />
+        <activity
+            android:name=".CycleList"
+            android:exported="true" />
+        <activity
+            android:name=".ReviewBook"
+            android:exported="true" />
+        <activity
+            android:name=".AddAccessories"
+            android:exported="true" />
+        <activity
+            android:name=".CycleDetails"
+            android:exported="true" />
+        <activity
+            android:name=".SelectCycle"
+            android:exported="true" />
+        <activity
+            android:name=".LatteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SummaryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity_Recyc"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".Database.OrderProvider"
+            android:authorities="com.example.designapp_final"
+            android:exported="true" />
+    </application>
+
+</manifest>

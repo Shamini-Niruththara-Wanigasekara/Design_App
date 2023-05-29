@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderSummary"
+        android:text="Cycle Name"
+        android:textStyle="bold"
+        android:id="@+id/cycleNameinOrderSummary"
+        android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+        android:id="@+id/quantityinOrderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cycleNameinOrderSummary"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="-20dp"
+        android:layout_toRightOf="@+id/cycleNameinOrderSummary"
+        android:text="x"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hasHelmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cycleNameinOrderSummary"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="has Helmet"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/hasAccessory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cycleNameinOrderSummary"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/hasHelmet"
+        android:text="has Accessory"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="$10"
+        android:id="@+id/priceinOrderSummary"
+        android:layout_marginRight="10dp"/>
+
+
+
+</RelativeLayout>

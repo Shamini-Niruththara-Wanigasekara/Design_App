@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Privacy Mode"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="One Handed Mode"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Accessibility"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Default app Language"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Notifications"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Clear app Cache"/>
+
+
+</LinearLayout>
