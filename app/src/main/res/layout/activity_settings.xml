@@ -13,37 +13,43 @@
         android:id="@+id/switch_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Privacy Mode"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Privacy Mode" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="One Handed Mode"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="One Handed Mode" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Accessibility"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Accessibility" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_4"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Default app Language"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Default app Language" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_5"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Notifications"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Notifications" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_6"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Clear app Cache"/>
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Clear app Cache" />
 
 
 </LinearLayout>

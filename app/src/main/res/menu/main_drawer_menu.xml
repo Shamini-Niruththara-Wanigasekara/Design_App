@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <group android:checkableBehavior="single">
 
         <item
@@ -7,28 +8,35 @@
             android:icon="@drawable/nav_my_location"
             android:title="My Location"/>
         <item
-            android:id="@+id/nav_navllocation"
+            android:id="@+id/nav_navlocation"
             android:icon="@drawable/nav_navigation"
             android:title="Navigate Location"/>
         <item
-            android:id="@+id/nav_serchlocation"
+            android:id="@+id/nav_serachlocation"
             android:icon="@android:drawable/ic_menu_search"
             android:title="Search Location"/>
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/nav_settings"
             android:title="Settings"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_profile"-->
+<!--            android:icon="@drawable/nav_settings"-->
+<!--            android:title="Profile"/>-->
         <item
             android:id="@+id/nav_info"
             android:icon="@drawable/nav_info"
-            android:title="Information"/>
-        <item
-            android:id="@+id/nav_exit"
-            android:icon="@drawable/nav_exit"
-            android:title="Log Out"/>
-
-
+            android:title="About"/>
 
     </group>
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/nav_exit"
+                android:title="Log Out"/>
+        </menu>
+    </item>
 
 </menu>

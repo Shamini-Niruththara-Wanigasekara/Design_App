@@ -6,17 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class CycleDetails extends AppCompatActivity {
+public class MyAccessories extends AppCompatActivity {
     private Button move;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cycledetails);
-        move =findViewById(R.id.buttonCycleDetails);
+        setContentView(R.layout.activity_my_accessories);
+        move =findViewById(R.id.btnAcc);
         move.setOnClickListener(v -> {
-            Intent intent = new Intent( CycleDetails.this, AddAccessories.class);
+            Intent intent = new Intent(MyAccessories.this, DashBoardActivity.class);
             startActivity(intent);
         });
+
     }
 }

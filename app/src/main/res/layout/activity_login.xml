@@ -26,42 +26,46 @@
 
             <EditText
                 android:id="@+id/login_email"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
+                android:layout_width="362dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/field_btn"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:hint="Email"
                 android:padding="8dp" />
 
             <EditText
-                android:layout_width="350dp"
-                android:layout_height="60dp"
                 android:id="@+id/login_password"
-                android:background="@drawable/field_btn"
+                android:layout_width="362dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:padding="8dp"
+                android:background="@drawable/field_btn"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"/>
+                android:padding="8dp" />
 
             <Button
-                android:layout_width="350dp"
+                android:id="@+id/btnLogin"
+                android:layout_width="362dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/curve_btn"
+                android:fontFamily="@font/arbutus_slab"
                 android:text="LOGIN"
-                android:id="@+id/login_btn"
-                android:textSize="18dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/signup_redirect_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:padding="8dp"
                 android:text="Not an User? SignUp"
                 android:textColor="@color/black"

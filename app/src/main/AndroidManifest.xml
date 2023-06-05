@@ -26,7 +26,19 @@
         android:theme="@style/Theme.DesignApp_Final"
         tools:targetApi="31">
         <activity
-            android:name=".TeamsConditionsActivity"
+            android:name=".RidesHistory"
+            android:exported="false" />
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyAccessories"
+            android:exported="false" />
+        <activity
+            android:name=".CardDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
             android:exported="true" />
         <activity
             android:name=".SettingsActivity"
@@ -35,11 +47,8 @@
             android:name=".DashBoardActivity"
             android:exported="true" />
         <activity
-            android:name=".DrawerBaseActivity"
-            android:exported="true" />
-        <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
             android:exported="true" />
@@ -53,6 +62,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB12ekB7VNnhwzTMD2pg2vk4Gl3w_2Jxsc" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".MapsActivitySearch"
@@ -65,36 +77,12 @@
             android:name=".PaymentChoice"
             android:exported="true" />
         <activity
-            android:name=".ReviewBookView"
-            android:exported="true" />
-        <activity
-            android:name=".AddAccessoriesView"
-            android:exported="true" />
-        <activity
             android:name=".SensorActivity"
             android:exported="true" />
         <activity
             android:name=".MapsActivity"
             android:exported="true"
             android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".CyclelistView"
-            android:exported="true" />
-        <activity
-            android:name=".CycleList"
-            android:exported="true" />
-        <activity
-            android:name=".ReviewBook"
-            android:exported="true" />
-        <activity
-            android:name=".AddAccessories"
-            android:exported="true" />
-        <activity
-            android:name=".CycleDetails"
-            android:exported="true" />
-        <activity
-            android:name=".SelectCycle"
-            android:exported="true" />
         <activity
             android:name=".LatteActivity"
             android:exported="true" />
@@ -116,6 +104,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
 
         <provider

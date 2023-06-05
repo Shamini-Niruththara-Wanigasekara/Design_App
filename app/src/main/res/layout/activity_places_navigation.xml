@@ -10,40 +10,34 @@
     android:padding="20dp"
     tools:context=".PlacesNavigation">
 
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Navigate any Location "
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
     <EditText
-        android:id="@+id/source"
+        android:id="@+id/sourceNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus_slab"
         android:hint="Enter Source Location" />
 
     <EditText
-        android:id="@+id/destination"
-        android:hint="Enter Destination Location"
+        android:id="@+id/destinationNav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus_slab"
+        android:hint="Enter Destination Location" />
 
     <Button
         android:id="@+id/btnSubmit"
-        android:text="Open Navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F4675D"/>
-
+        android:background="#F4675D"
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Open Navigation"
+        android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/images" />
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="335dp"
+        app:srcCompat="@drawable/nav" />
+
 
 </LinearLayout>

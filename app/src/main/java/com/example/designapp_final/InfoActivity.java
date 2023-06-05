@@ -66,7 +66,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
                 // cycle price
-                int basePrice = 5;
+                int basePrice = 50;
                 quantity++;
                 displayQuantity();
                 int Price = basePrice * quantity;
@@ -86,7 +86,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
 
-                int basePrice = 5;
+                int basePrice = 50;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(InfoActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();

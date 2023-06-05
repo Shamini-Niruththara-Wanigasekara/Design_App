@@ -8,24 +8,38 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 public class DrawerBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
+    FloatingActionButton fab;
 
+
+    @SuppressLint("InflateParams")
     @Override
     public void setContentView(View view){
         drawerLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_drawer_base, null);
         FrameLayout container = drawerLayout.findViewById((R.id.activitycontainer));
         container.addView(view);
         super.setContentView(drawerLayout);
+        fab = findViewById(R.id.fab);
 
         Toolbar toolbar = drawerLayout.findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -36,24 +50,56 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.menu_drawer_open, R.string.menu_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-    }
 
+        if(view == null){
+            startActivity(new Intent(this, MapsActivity.class));
+            overridePendingTransition(0,0);
+            navigationView.setCheckedItem(R.id.nav_mylocation);
+        }
+        View header = navigationView.getHeaderView(0);
+        ImageView navImage = (ImageView) header.findViewById(R.id.navImage);
+        TextView navName = (TextView) header.findViewById(R.id.navName);
+        TextView navEmail = (TextView) header.findViewById(R.id.navEmail);
+
+        DBHelper dbHelper = new DBHelper(this);
+        Cursor cursor = dbHelper.getUser();
+
+        if (cursor.getCount() == 0){
+            Toast.makeText(this, "No Profile Details", Toast.LENGTH_SHORT).show();
+        } else {
+            while (cursor.moveToNext()){
+                navName.setText(""+cursor.getString(0));
+                navEmail.setText(""+cursor.getString(1));
+                byte[] imageByte = cursor.getBlob(2);
+
+                Bitmap bitmap = BitmapFactory.decodeByteArray(imageByte,0,imageByte.length);
+                navImage.setImageBitmap(bitmap);
+            }
+        }
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DrawerBaseActivity.this, UploadActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         drawerLayout.closeDrawer(GravityCompat.START);
-
+        Log.d("MENU ITEM :", item.toString());
         switch (item.getItemId()){
             case R.id.nav_mylocation:
                 startActivity(new Intent(this, MapsActivity.class));
                 overridePendingTransition(0,0);
                 break;
 
-            case R.id.nav_navllocation:
+            case R.id.nav_navlocation:
                 startActivity(new Intent(this, PlacesNavigation.class));
                 overridePendingTransition(0,0);
                 break;
 
-            case R.id.nav_serchlocation:
+            case R.id.nav_serachlocation:
                 startActivity(new Intent(this, MapsActivitySearch.class));
                 overridePendingTransition(0,0);
                 break;
@@ -64,15 +110,13 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
                 break;
 
             case R.id.nav_info:
-                startActivity(new Intent(this, TeamsConditionsActivity.class));
+                startActivity(new Intent(this, AboutActivity.class));
                 overridePendingTransition(0,0);
                 break;
 
             case R.id.nav_exit:
                 logoutMenu(DrawerBaseActivity.this);
                 break;
-
-
         }
         return false;
     }
@@ -96,9 +140,18 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         builder.show();
     }
 
+
     protected void allocateActivityTitle(String titleString){
         if (getSupportActionBar() != null){
             getSupportActionBar().setTitle(titleString);
         }
     }
+//    @Override
+//    public void onBackPressed() {
+//        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 }

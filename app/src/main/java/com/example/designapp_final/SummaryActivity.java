@@ -23,14 +23,14 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
-        move =findViewById(R.id.buttonPay);
+        move =findViewById(R.id.btnOrder);
         move.setOnClickListener(v -> {
             Intent intent = new Intent(SummaryActivity.this, PaymentChoice.class);
             startActivity(intent);
         });
 
 
-        Button clearthedata = findViewById(R.id.clearthedatabase);
+        Button clearthedata = findViewById(R.id.btnCclearDb);
 
         clearthedata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
 
         getLoaderManager().initLoader(LOADER, null, this);
 
-        ListView listView = findViewById(R.id.list);
+        ListView listView = findViewById(R.id.orderList);
         mAdapter = new CartAdapter(this, null);
         listView.setAdapter(mAdapter);
 

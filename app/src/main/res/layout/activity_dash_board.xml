@@ -17,44 +17,69 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <Button
-        android:id="@+id/buttondashboard"
-        android:layout_width="171dp"
-        android:layout_height="58dp"
-        android:background="@drawable/curve_btn"
+        android:id="@+id/btnDash1"
+        android:layout_width="253dp"
+        android:layout_height="92dp"
+        android:background="@drawable/side_nav_bar"
+        android:fontFamily="@font/arbutus_slab"
         android:text="Select a Cycle"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
-        android:id="@+id/buttondashboard2"
-        android:layout_width="171dp"
-        android:layout_height="58dp"
-        android:background="@drawable/curve_btn"
+        android:id="@+id/btnDash2"
+        android:layout_width="251dp"
+        android:layout_height="89dp"
+        android:background="@drawable/side_nav_bar"
+        android:fontFamily="@font/arbutus_slab"
         android:text="See Accessories"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="0.728" />
+
+    <Button
+        android:id="@+id/btnDash3"
+        android:layout_width="251dp"
+        android:layout_height="89dp"
+        android:background="@drawable/side_nav_bar"
+        android:fontFamily="@font/arbutus_slab"
+        android:text="Rides History"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/buttondashboard"
+        android:layout_width="226dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDash1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView50"
-        app:srcCompat="@drawable/images" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cy2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

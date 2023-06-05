@@ -1,7 +1,5 @@
 package com.example.designapp_final;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,8 +20,8 @@ public class PlacesNavigation extends DrawerBaseActivity {
         setContentView(binding.getRoot());
         allocateActivityTitle("Navigate Location");
 
-        EditText editTextSource = findViewById(R.id.source);
-        EditText editTextDestination = findViewById(R.id.destination);
+        EditText editTextSource = findViewById(R.id.sourceNav);
+        EditText editTextDestination = findViewById(R.id.destinationNav);
         Button button = findViewById(R.id.btnSubmit);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

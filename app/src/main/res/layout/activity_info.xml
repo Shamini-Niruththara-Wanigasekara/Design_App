@@ -28,15 +28,19 @@
                 android:src="@drawable/avail"/>
 
             <TextView
+                android:id="@+id/cycleNameinInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageViewInfo"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:text="Cycle Name"
                 android:textColor="@color/org"
                 android:textSize="30sp"
-                android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:id="@+id/cycleNameinInfo"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cyclePrice"
@@ -49,7 +53,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="14dp"
                 android:layout_marginRight="14dp"
-                android:text="$250 per one Ride"
+                android:fontFamily="@font/arbutus_slab"
+                android:text="$ per one Ride"
                 android:textColor="@color/org"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -112,57 +117,66 @@
 
 
                 <RadioButton
+                    android:id="@+id/usedradioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Used"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/usedradioButton"/>
+                    android:fontFamily="@font/arbutus_slab"
+                    android:text="Used" />
 
                 <RadioButton
+                    android:id="@+id/newedRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Newed"
-                    android:id="@+id/newedRadioButton"/>
+                    android:fontFamily="@font/arbutus_slab"
+                    android:text="Newed" />
 
             </RadioGroup>
 
             <CheckBox
+                android:id="@+id/addHelmet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radioGroup"
-                android:id="@+id/addHelmet"
-                android:text="Hetmet price $3"/>
+                android:fontFamily="@font/arbutus_slab"
+                android:text="Add Hetmet " />
 
             <CheckBox
+                android:id="@+id/addAccessory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/addAccessory"
                 android:layout_below="@+id/addHelmet"
-                android:text="Add $2 for Accessory"/>
+                android:fontFamily="@font/arbutus_slab"
+                android:text="Add Accessory" />
 
             <TextView
+                android:id="@+id/cycleDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_below="@+id/addAccessory"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:text="@string/Avail"
-                android:id="@+id/descriptioninfo"
-                android:textStyle="italic"
                 android:textSize="15sp"
-                android:layout_below="@+id/addAccessory"/>
+                android:textStyle="italic" />
 
 
             <Button
+                android:id="@+id/addtocart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/cycleDetails"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
-                android:layout_below="@+id/descriptioninfo"
-                android:background="#F44336"
-                android:textStyle="bold"
-                android:id="@+id/addtocart"
+                android:background="@drawable/side_nav_bar"
+                android:fontFamily="@font/arbutus_slab"
+                android:text="Add to cart"
                 android:textColor="@android:color/white"
-                android:text="Add to cart"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

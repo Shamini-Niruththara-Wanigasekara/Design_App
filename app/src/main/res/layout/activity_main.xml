@@ -9,6 +9,7 @@
     <TextView
         android:layout_width="250dp"
         android:layout_height="28dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="Your Travelling Partner"
         android:textColor="#848388"
         android:textSize="20sp"
@@ -86,6 +87,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus_slab"
         android:text="Loading"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

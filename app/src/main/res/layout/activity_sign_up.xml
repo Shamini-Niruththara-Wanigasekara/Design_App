@@ -23,54 +23,59 @@
 
             <EditText
                 android:id="@+id/signup_email"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/field_btn"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:hint="Email"
                 android:padding="8dp" />
 
             <EditText
-                android:layout_width="350dp"
-                android:layout_height="60dp"
                 android:id="@+id/signup_password"
-                android:background="@drawable/field_btn"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:padding="8dp"
+                android:background="@drawable/field_btn"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"/>
+                android:padding="8dp" />
 
             <EditText
-                android:layout_width="350dp"
-                android:layout_height="60dp"
                 android:id="@+id/signup_confirm"
-                android:background="@drawable/field_btn"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:padding="8dp"
+                android:background="@drawable/field_btn"
+                android:drawableLeft="@drawable/baseline_password_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_password_24"
-                android:drawablePadding="8dp"/>
-            
+                android:padding="8dp" />
+
             <Button
-                android:layout_width="350dp"
+                android:id="@+id/btnSignup"
+                android:layout_width="358dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/curve_btn"
+                android:fontFamily="@font/arbutus_slab"
                 android:text="SIGN UP"
-                android:id="@+id/signup_btn"
-                android:textSize="18dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/login_redirect_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arbutus_slab"
                 android:padding="8dp"
                 android:text="Already an User? Login"
                 android:textColor="@color/black"

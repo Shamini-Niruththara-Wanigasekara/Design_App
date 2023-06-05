@@ -7,13 +7,15 @@
 
 
     <TextView
+        android:id="@+id/cycleNameinOrderSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/orderSummary"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="Cycle Name"
-        android:textStyle="bold"
-        android:id="@+id/cycleNameinOrderSummary"
-        android:layout_marginLeft="10dp"/>
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -35,8 +37,10 @@
 
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="has Helmet"
-        android:textStyle="italic" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/hasAccessory"
@@ -46,16 +50,20 @@
         android:layout_marginLeft="21dp"
         android:layout_marginTop="16dp"
         android:layout_toRightOf="@+id/hasHelmet"
+        android:fontFamily="@font/arbutus_slab"
         android:text="has Accessory"
-        android:textStyle="italic" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/priceinOrderSummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
         android:text="$10"
-        android:id="@+id/priceinOrderSummary"
-        android:layout_marginRight="10dp"/>
+        android:textColor="#015E55"
+        android:textStyle="bold" />
 
 
 
