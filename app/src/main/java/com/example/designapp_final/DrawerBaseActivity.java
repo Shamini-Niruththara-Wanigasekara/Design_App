@@ -1,5 +1,17 @@
 package com.example.designapp_final;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -8,21 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import com.example.designapp_final.models.User;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -62,20 +60,25 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         TextView navName = (TextView) header.findViewById(R.id.navName);
         TextView navEmail = (TextView) header.findViewById(R.id.navEmail);
 
-        DBHelper dbHelper = new DBHelper(this);
-        Cursor cursor = dbHelper.getUser();
+        try {
+            UserDatabaseHelper userDatabaseHelper = new UserDatabaseHelper(this);
+            User user = userDatabaseHelper.getUser();
 
-        if (cursor.getCount() == 0){
-            Toast.makeText(this, "No Profile Details", Toast.LENGTH_SHORT).show();
-        } else {
-            while (cursor.moveToNext()){
-                navName.setText(""+cursor.getString(0));
-                navEmail.setText(""+cursor.getString(1));
-                byte[] imageByte = cursor.getBlob(2);
+            if(user == null){
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+            assert user != null;
+            navName.setText(user.getName());
+            navEmail.setText(user.getEmail());
+            byte[] imageByte = user.getImage();
 
-                Bitmap bitmap = BitmapFactory.decodeByteArray(imageByte,0,imageByte.length);
+            if(imageByte != null){
+                Bitmap bitmap = BitmapFactory.decodeByteArray(imageByte, 0, imageByte.length);
                 navImage.setImageBitmap(bitmap);
             }
+        }catch (Exception e){
+            e.printStackTrace();
         }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,18 +129,11 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
         AlertDialog.Builder builder = new AlertDialog.Builder(drawerBaseActivity);
         builder.setTitle("Log out");
         builder.setMessage("Are you sure you want to exit");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
+        builder.setPositiveButton("Yes", (dialog, which) -> {
+            Intent intent = new Intent(DrawerBaseActivity.this, MainActivity.class);
+            startActivity(intent);
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        builder.setNegativeButton("No", (dialog, which) -> dialog.dismiss());
         builder.show();
     }
 
