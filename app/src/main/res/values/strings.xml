@@ -57,6 +57,7 @@
     <string name="todo">TODO</string>
     <string name="cycle_rider">CYCLE RIDER</string>
     <string name="loading">Loading</string>
+    <string name="password">Password</string>
 
 
 </resources>
