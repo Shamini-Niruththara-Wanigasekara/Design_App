@@ -7,18 +7,18 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_height="28dp"
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/arbutus_slab"
-        android:text="Your Travelling Partner"
+        android:text="@string/your_travelling_partner"
         android:textColor="#848388"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_cycle_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.59000003" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -29,13 +29,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/cy2" />
+        app:srcCompat="@drawable/cy2"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/txt_cycle_name"
-        android:layout_width="185dp"
-        android:layout_height="24dp"
-        android:text="Developed by S92067004"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/developed_by_s92067004"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,8 +49,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CYCLE RIDER"
-        android:textColor="#FF7961"
+        android:height="48dp"
+        android:text="@string/cycle_rider"
+        android:textColor="#FA5D41"
         android:textIsSelectable="true"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -59,41 +61,29 @@
         app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.529" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#FF7961"
+        app:layout_constraintBottom_toTopOf="@+id/txt_cycle_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729"
-        app:srcCompat="@drawable/ellipse" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.667"
-        app:srcCompat="@drawable/ellipsewhite" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/arbutus_slab"
-        android:text="Loading"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/loading"
+        app:layout_constraintBottom_toTopOf="@+id/txt_cycle_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
